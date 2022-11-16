@@ -20,10 +20,17 @@ public class MoodAnalyserTest {
 
     //To pass this Test Case when calling analyseMood method with no params should return SAD
 
-    @Test
+   /* @Test
     public void given_I_am_In_Sad_Mood_Message_In_Constructor_Return_Sad(){
         MoodAnalyser moodAnalyser=new MoodAnalyser();
         String mood=moodAnalyser.MoodAnalyser();
         assertEquals("Sad",mood);
+    }*/
+    //To pass this Test Case when calling analyseMood method with no params should return HAPPY
+    @Test
+    public void given_I_am_In_Happy_Mood_Message_In_Constructor_Return_Happy(){
+        MoodAnalyser moodAnalyser=new MoodAnalyser();
+        String mood=moodAnalyser.MoodAnalyser();
+        assertEquals("Happy",mood);
     }
 }

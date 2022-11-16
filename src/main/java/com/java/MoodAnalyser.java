@@ -5,9 +5,13 @@ public class MoodAnalyser {
     MoodAnalyser(){
     }
 
-    public String MoodAnalyser() {
+   /* public String MoodAnalyser() {
         return "Sad";
+    }*/
+    public String MoodAnalyser() {
+        return "Happy";
     }
+
 
     public static String analyseTheMood(String mood) {
         if (mood == "Happy")
