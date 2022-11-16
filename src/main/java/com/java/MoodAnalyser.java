@@ -1,6 +1,14 @@
 package com.java;
 
 public class MoodAnalyser {
+    private String message;
+    MoodAnalyser(){
+    }
+
+    public String MoodAnalyser() {
+        return "Sad";
+    }
+
     public static String analyseTheMood(String mood) {
         if (mood == "Happy")
             return "Happy";

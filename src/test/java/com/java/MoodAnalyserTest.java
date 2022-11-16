@@ -16,7 +16,14 @@ public class MoodAnalyserTest {
     public void analyse_Mood_Return_Mood(){
         assertEquals("Happy", MoodAnalyser.checkMood("I am Happy"));
         assertEquals("Sad", MoodAnalyser.checkMood("I am Sad"));
+    }
 
+    //To pass this Test Case when calling analyseMood method with no params should return SAD
 
+    @Test
+    public void given_I_am_In_Sad_Mood_Message_In_Constructor_Return_Sad(){
+        MoodAnalyser moodAnalyser=new MoodAnalyser();
+        String mood=moodAnalyser.MoodAnalyser();
+        assertEquals("Sad",mood);
     }
 }
