@@ -1,13 +1,14 @@
 package com.java;
 
-import junit.framework.TestCase;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static junit.framework.TestCase.assertEquals;
+
 
 public class MoodAnalyserTest {
     @Test
     public void analyse_Mood_And_Respond(){
-        TestCase.assertEquals("sad", MoodAnalyser.analyseTheMood("sad"));
+        assertEquals("Sad", MoodAnalyser.analyseTheMood("Sad"));
+        assertEquals("Happy", MoodAnalyser.analyseTheMood("Happy"));
     }
 }
