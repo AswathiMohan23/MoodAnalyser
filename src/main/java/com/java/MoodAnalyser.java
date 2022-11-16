@@ -5,9 +5,14 @@ public class MoodAnalyser {
     MoodAnalyser(){
     }
 
-   /* public String MoodAnalyser() {
-        return "Sad";
-    }*/
+    public static void invalidMoodAnalyser(String message) {
+        try{
+            message.equals("sad");
+            }catch (Exception e){
+                System.out.println("e");
+        }
+
+    }
     public String MoodAnalyser() {
         return "Happy";
     }
@@ -25,4 +30,6 @@ public class MoodAnalyser {
         else
             return "Sad";
     }
-    }
+
+
+}

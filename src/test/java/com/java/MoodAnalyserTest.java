@@ -6,6 +6,8 @@ import static junit.framework.TestCase.assertEquals;
 
 
 public class MoodAnalyserTest {
+    static MoodAnalyser moodAnalyser=new MoodAnalyser();
+
     @Test
     public void analyse_Mood_And_Respond(){
         assertEquals("Happy", MoodAnalyser.analyseTheMood("Happy"));
@@ -29,8 +31,12 @@ public class MoodAnalyserTest {
     //To pass this Test Case when calling analyseMood method with no params should return HAPPY
     @Test
     public void given_I_am_In_Happy_Mood_Message_In_Constructor_Return_Happy(){
-        MoodAnalyser moodAnalyser=new MoodAnalyser();
         String mood=moodAnalyser.MoodAnalyser();
         assertEquals("Happy",mood);
+    }
+    @Test
+    public void handle_Exception_If_User_Provides_Invalid_Mood(){
+        moodAnalyser.invalidMoodAnalyser("anger");
+
     }
 }
