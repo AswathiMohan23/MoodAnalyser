@@ -5,13 +5,9 @@ public class MoodAnalyser {
     MoodAnalyser(){
     }
 
-    public static void invalidMoodAnalyser(String message) {
-        try{
-            message.equals("sad");
-            }catch (Exception e){
-                System.out.println("e");
-        }
-
+    public static void invalidMoodAnalyser(String message) throws MoodAnalyserException {
+        if(message.equals("null"))
+            throw new MoodAnalyserException();
     }
     public String MoodAnalyser() {
         return "Happy";

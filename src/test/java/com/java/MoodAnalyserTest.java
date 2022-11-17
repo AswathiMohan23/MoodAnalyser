@@ -35,8 +35,11 @@ public class MoodAnalyserTest {
         assertEquals("Happy",mood);
     }
     @Test
-    public void handle_Exception_If_User_Provides_Invalid_Mood(){
-        moodAnalyser.invalidMoodAnalyser("anger");
-
+    public void handle_Exception_If_User_Provides_Invalid_Mood() throws MoodAnalyserException{
+        try{
+            MoodAnalyser.invalidMoodAnalyser("null") ;
+        }catch (MoodAnalyserException exception){
+            System.out.println("Invalid mood");
+        }
     }
 }
