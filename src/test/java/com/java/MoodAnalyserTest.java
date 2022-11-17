@@ -51,4 +51,13 @@ public class MoodAnalyserTest {
             System.out.println("Happy ===> TC 2.1");
         }
     }
+    //In case of NULL or Empty Mood throw Custom Exception MoodAnalysisException.Use Enum to differentiate the Mood analysis Errors
+    @Test
+    public void given_Invalid_Mood_Should_Inform_The_User() throws MoodAnalyserException{
+        try{
+            MoodAnalyser.invalidMoodAnalyser("null") ;
+        }catch (MoodAnalyserException exception){
+            System.out.println(MoodAnalyserEnum.INVALID_MOOD);
+        }
+    }
 }
