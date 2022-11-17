@@ -9,6 +9,10 @@ public class MoodAnalyser {
         if(message.equals("null"))
             throw new MoodAnalyserException();
     }
+    public static void EmptyMoodAnalyser(String message) throws MoodAnalyserException {
+        if(message.equals("Empty"))
+            throw new MoodAnalyserException();
+    }
     public String MoodAnalyser() {
         return "Happy";
     }

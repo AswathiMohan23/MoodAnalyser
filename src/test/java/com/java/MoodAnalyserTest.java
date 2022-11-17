@@ -71,4 +71,15 @@ public class MoodAnalyserTest {
             System.out.println(MoodAnalyserEnum.NULL);
         }
     }
+
+    //Handle Empty Mood Scenario throw MoodAnalysisException and inform user of the EmptyMood .HINT: Use Enum to EMPTY or NULL
+
+    @Test
+    public void given_Empty_Mood_Should_Throw_MoodAnalyserException_Indicating_EmptyMood() throws MoodAnalyserException{
+        try{
+            MoodAnalyser.EmptyMoodAnalyser("Empty") ;
+        }catch (MoodAnalyserException exception){
+            System.out.println(MoodAnalyserEnum.EMPTY_MOOD+" ======>>>TC 3.2 ");
+        }
+    }
 }
