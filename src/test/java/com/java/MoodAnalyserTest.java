@@ -60,4 +60,15 @@ public class MoodAnalyserTest {
             System.out.println(MoodAnalyserEnum.INVALID_MOOD);
         }
     }
+
+    //To pass this Test Case in try catch block throw MoodAnalysisException
+
+    @Test
+    public void given_Null_Mood_Should_Throw_MoodAnalyserException() throws MoodAnalyserException{
+        try{
+            MoodAnalyser.invalidMoodAnalyser("null") ;
+        }catch (MoodAnalyserException exception){
+            System.out.println(MoodAnalyserEnum.NULL);
+        }
+    }
 }
