@@ -39,7 +39,16 @@ public class MoodAnalyserTest {
         try{
             MoodAnalyser.invalidMoodAnalyser("null") ;
         }catch (MoodAnalyserException exception){
-            System.out.println("Invalid mood");
+            System.out.println("Invalid mood ====> UC2");
+        }
+    }
+    //To make this Test Case pass Handle NULL Scenario using try catch and return Happy
+    @Test
+    public void given_Null_Mood_Should_Return_Happy() throws MoodAnalyserException{
+        try{
+            MoodAnalyser.invalidMoodAnalyser("null") ;
+        }catch (MoodAnalyserException exception){
+            System.out.println("Happy ===> TC 2.1");
         }
     }
 }
